@@ -1,0 +1,56 @@
+﻿  AGameObject.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'AGameObject.cpp')
+  
+  BaseRunner.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\BaseRunner.h(1,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'BaseRunner.cpp')
+  
+  BGObject.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'BGObject.cpp')
+  
+  FPSCounter.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'FPSCounter.cpp')
+  
+  GameObjectManager.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'GameObjectManager.cpp')
+  
+  IconObject.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'IconObject.cpp')
+  
+  IETThread.cpp
+  IExecutionEvent.cpp
+  main.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\BaseRunner.h(1,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'main.cpp')
+  
+  MathUtils.cpp
+  PoolWorkerThread.cpp
+  RTSemaphore.cpp
+  RTThread.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\RTImage.h(3,10): error C1083: Cannot open include file: 'opencv2/core.hpp': No such file or directory
+  (compiling source file 'RTThread.cpp')
+  
+  RTImage.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\RTImage.h(3,10): error C1083: Cannot open include file: 'opencv2/core.hpp': No such file or directory
+  (compiling source file 'RTImage.cpp')
+  
+  StreamAssetLoader.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\TextureManager.h(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'StreamAssetLoader.cpp')
+  
+  StringUtils.cpp
+  TextureDisplay.cpp
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\AGameObject.h(2,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'TextureDisplay.cpp')
+  
+  TextureManager.cpp
+E:\VS 2022\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\PARCM_Project\TextureManager.h(3,10): error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  (compiling source file 'TextureManager.cpp')
+  
+  ThreadPool.cpp
