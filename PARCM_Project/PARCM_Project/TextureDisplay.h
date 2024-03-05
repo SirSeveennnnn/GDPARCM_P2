@@ -33,6 +33,10 @@ private:
 	const int MAX_COLUMN = 28;
 	const int MAX_ROW = 22;
 
+	int index = 0;
+	int maxIndex = 511;
+	int finishedLoading = 0;
+
 	Mutex guard; //used to avoid possible race conditions when spawning objects. Not really required for this exercise. Will be explained in future lessons.
 
 };

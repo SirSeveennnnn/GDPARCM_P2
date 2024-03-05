@@ -1,6 +1,10 @@
 #include <stddef.h>
 #include "GameObjectManager.h"
 #include <iostream>
+#include "VideoObject.h"
+#include "FPSCounter.h"
+
+#include <SFML/Audio.hpp>
 
 GameObjectManager* GameObjectManager::sharedInstance = NULL;
 
@@ -89,4 +93,32 @@ void GameObjectManager::deleteObjectByName(AGameObject::String name) {
 	if (object != NULL) {
 		this->deleteObject(object);
 	}
+}
+
+void GameObjectManager::deleteAllGameObjects()
+{
+	this->gameObjectMap.clear();
+
+	// Delete each object in the list
+	for (AGameObject* gameObject : this->gameObjectList) {
+		delete gameObject;
+	}
+
+	// Clear the list
+	this->gameObjectList.clear();
+}
+
+void GameObjectManager::InitializeMainMenu()
+{
+	VideoObject* videoObject = new VideoObject("VideoObject");
+	videoObject->setPosition(0, 0);
+	sharedInstance->addObject(videoObject);
+
+	FPSCounter* fpsCounter = new FPSCounter();
+	sharedInstance->addObject(fpsCounter);
+
+	sf::Music* soundTrack = new sf::Music();
+	soundTrack->openFromFile("Media/Audio/soundtrack.mp3");
+	soundTrack->play();
+
 }

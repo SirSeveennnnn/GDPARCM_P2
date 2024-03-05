@@ -11,11 +11,14 @@ class AudioLooper : public AGameObject
 {
 public:
 	AudioLooper(String name);
+	~AudioLooper();
 	void initialize();
 	void processInput(sf::Event event);
 	void update(sf::Time deltaTime);
 
 	void ToggleMusic(string audioName);
+
+	void StopAllMusic();
 
 private:
 	unordered_map<string, sf::Music*> activeLoops;
@@ -25,7 +28,7 @@ private:
 	void AddMusicToLoop(string audioName);
 	void RemoveMusicFromLoop(string audioName);
 
-	float musicDuration = 4000.0f;
+	float musicDuration = 5500.0f;
 	float ticks = 0;
 };
 

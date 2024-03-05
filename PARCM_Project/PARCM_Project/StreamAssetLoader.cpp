@@ -4,10 +4,11 @@
 #include "TextureManager.h"
 #include <random>
 
-StreamAssetLoader::StreamAssetLoader(string path, IExecutionEvent* executionEvent)
+StreamAssetLoader::StreamAssetLoader(string path, int index, IExecutionEvent* executionEvent)
 {
 	this->path = path;
 	this->executionEvent = executionEvent;
+	this->index = index;
 }
 
 StreamAssetLoader::~StreamAssetLoader()
@@ -17,13 +18,10 @@ StreamAssetLoader::~StreamAssetLoader()
 
 void StreamAssetLoader::onStartTask()
 {
-
-	
-
-	std::vector<string> tokens = StringUtils::split(path, '/');
-	string assetName = StringUtils::split(tokens[tokens.size() - 1], '.')[0];
-	TextureManager::getInstance()->instantiateAsTexture(path, assetName, true);
-
+	IETThread::sleep(200);
+	TextureManager::getInstance()->addToSequence(path, index);
 	this->executionEvent->onFinishedExecution();
 
 }
+
+

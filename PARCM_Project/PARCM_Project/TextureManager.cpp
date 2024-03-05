@@ -21,7 +21,7 @@ TextureManager* TextureManager::getInstance() {
 TextureManager::TextureManager()
 {
 	this->countStreamingAssets();
-	this->textureThreadPool = new ThreadPool("Texture Thread Pool", 5);
+	this->textureThreadPool = new ThreadPool("Texture Thread Pool", 10);
 	this->textureThreadPool->StartScheduler();
 }
 
@@ -47,8 +47,8 @@ void TextureManager::loadSingleStreamAsset(int index, IExecutionEvent* execution
 	for (const auto& entry : std::filesystem::directory_iterator(STREAMING_PATH)) {
 		if(index == fileNum)
 		{
-			StreamAssetLoader* assetLoader = new StreamAssetLoader(entry.path().string(), executionEvent);
-			this->textureThreadPool->ScheduleTask(assetLoader);
+			//StreamAssetLoader* assetLoader = new StreamAssetLoader(entry.path().string(), executionEvent);
+			//this->textureThreadPool->ScheduleTask(assetLoader);
 
 			break;
 		}
@@ -113,4 +113,37 @@ void TextureManager::instantiateAsTexture(String path, String assetName, bool is
 		this->baseTextureList.push_back(texture);
 	}
 	
+}
+
+void TextureManager::loadSequence(int index, IExecutionEvent* executionEvent)
+{
+	int fileNum = 0;
+
+	for (const auto& entry : std::filesystem::directory_iterator(SEQUENCE_PATH)) {
+		
+		if (index == fileNum)
+		{
+			std::cout << "Found Index: " << index << " and FileNum: " << fileNum << std::endl << " Path is: " << entry.path().string() << std::endl;
+			StreamAssetLoader* assetLoader = new StreamAssetLoader(entry.path().string(), index, executionEvent);
+			this->textureThreadPool->ScheduleTask(assetLoader);
+			break;
+		}
+
+		fileNum++;
+	
+	}
+
+}
+
+void TextureManager::addToSequence(String path, int index)
+{
+	sf::Texture* texture = new sf::Texture();
+	texture->loadFromFile(path);
+
+	sequenceMap.insert({index, texture });
+}
+
+sf::Texture* TextureManager::getSequenceTexture(int index)
+{
+	return sequenceMap[index];
 }

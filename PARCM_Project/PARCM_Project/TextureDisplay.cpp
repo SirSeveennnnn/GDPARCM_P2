@@ -4,6 +4,9 @@
 #include "BaseRunner.h"
 #include "GameObjectManager.h"
 #include "IconObject.h"
+#include "FadeEffect.h"
+#include "LoadingBar.h"
+
 TextureDisplay::TextureDisplay(): AGameObject("TextureDisplay")
 {
 	
@@ -19,12 +22,7 @@ void TextureDisplay::processInput(sf::Event event)
 	
 }
 
-void TextureDisplay::update(sf::Time deltaTime)
-{
-	this->ticks += BaseRunner::TIME_PER_FRAME.asMilliseconds();
-
-	//<code here for spawning icon object periodically>
-	this->ticks += BaseRunner::TIME_PER_FRAME.asMilliseconds();
+/*
 	if (this->streamingType == StreamingType::BATCH_LOAD && !this->startedStreaming && this->ticks > this->STREAMING_LOAD_DELAY)
 	{
 		this->startedStreaming = true;
@@ -36,8 +34,26 @@ void TextureDisplay::update(sf::Time deltaTime)
 		this->ticks = 0.0f;
 		TextureManager::getInstance()->loadSingleStreamAsset(this->numDisplayed, this);
 		this->numDisplayed++;
-		
+
 	}
+*/
+
+
+void TextureDisplay::update(sf::Time deltaTime)
+{
+	
+	//<code here for spawning icon object periodically>
+	this->ticks += BaseRunner::TIME_PER_FRAME.asMilliseconds();
+
+
+	if (this->ticks > this->STREAMING_LOAD_DELAY && index < maxIndex)
+	{
+		//Trigger Instance Manager
+		TextureManager::getInstance()->loadSequence(index, this);
+		index++;
+		this->ticks = 0.0f;
+	}
+
 }
 
 void TextureDisplay::spawnObject()
@@ -66,4 +82,18 @@ void TextureDisplay::spawnObject()
 void TextureDisplay::onFinishedExecution()
 {
 	//this->spawnObject();
+	std::cout << "IExecution Event Fired" << std::endl;
+
+	AGameObject* gameObject = GameObjectManager::getInstance()->findObjectByName("LoadingBar");
+	LoadingBar* loadingBar = dynamic_cast<LoadingBar*>(gameObject);
+	loadingBar->AddProgress();
+
+	finishedLoading++;
+	if (finishedLoading == maxIndex)
+	{
+		//Start fade
+		AGameObject* gameObject = GameObjectManager::getInstance()->findObjectByName("FadeEffect");
+		FadeEffect* fade = dynamic_cast<FadeEffect*>(gameObject);
+		fade->StartFade();
+	}
 }

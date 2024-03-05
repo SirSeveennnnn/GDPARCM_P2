@@ -11,6 +11,8 @@
 #include "LaunchPadBase.h"
 #include "AudioLooper.h"
 #include "Button.h"
+#include "FadeEffect.h"
+#include "LoadingBar.h"
 
 /// <summary>
 /// This demonstrates a running parallax background where after X seconds, a batch of assets will be streamed and loaded.
@@ -28,9 +30,6 @@ BaseRunner::BaseRunner() :
 	TextureDisplay* display = new TextureDisplay();
 	GameObjectManager::getInstance()->addObject(display);
 
-	FPSCounter* fpsCounter = new FPSCounter();
-	GameObjectManager::getInstance()->addObject(fpsCounter);
-
 	//Launchpad
 	LaunchPadBase* launchpadBase = new LaunchPadBase("LaunchPadBase");
 	launchpadBase->setScale(0.8f, 0.8f);
@@ -45,62 +44,65 @@ BaseRunner::BaseRunner() :
 	int centerX = WINDOW_WIDTH / 2;
 	int centerY = WINDOW_HEIGHT / 2;
 
-	Button* button1 = new Button("Button1", looper, "Kick1");
+	Button* button1 = new Button("Button1", looper, "1");
 	button1->setPosition(centerX - 500, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button1);
 
-	Button* button2 = new Button("Button2", looper, "Kick2");
+	Button* button2 = new Button("Button2", looper, "2");
 	button2->setPosition(centerX - 300, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button2);
 
-	Button* button3 = new Button("Button3", looper, "Kick3");
+	Button* button3 = new Button("Button3", looper, "3");
 	button3->setPosition(centerX - 500, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button3);
 
-	Button* button4 = new Button("Button4", looper, "Kick4");
+	Button* button4 = new Button("Button4", looper, "4");
 	button4->setPosition(centerX - 300, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button4);
 
-	Button* button5 = new Button("Button5", looper, "Snare1");
+	Button* button5 = new Button("Button5", looper, "5");
 	button5->setPosition(centerX - 100, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button5);
 
-	Button* button6 = new Button("Button6", looper, "Snare2");
+	Button* button6 = new Button("Button6", looper, "6");
 	button6->setPosition(centerX + 100, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button6);
 
-	Button* button7 = new Button("button7", looper, "Snare3");
+	Button* button7 = new Button("button7", looper, "7");
 	button7->setPosition(centerX - 100, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button7);
 
-	Button* button8 = new Button("button8", looper, "Snare4");
+	Button* button8 = new Button("button8", looper, "8");
 	button8->setPosition(centerX + 100, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button8);
 
-	Button* button9 = new Button("button9", looper, "HH1");
+	Button* button9 = new Button("button9", looper, "9");
 	button9->setPosition(centerX + 300, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button9);
 
-	Button* button10 = new Button("button10", looper, "HH2");
+	Button* button10 = new Button("button10", looper, "10");
 	button10->setPosition(centerX + 500, centerY - 100);
 	GameObjectManager::getInstance()->addObject(button10);
 
-	Button* button11 = new Button("button11", looper, "HH3");
+	Button* button11 = new Button("button11", looper, "11");
 	button11->setPosition(centerX + 300, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button11);
 
-	Button* button12 = new Button("button12", looper, "HH4");
+	Button* button12 = new Button("button12", looper, "12");
 	button12->setPosition(centerX + 500, centerY + 100);
 	GameObjectManager::getInstance()->addObject(button12);
 
-	/*
-	sf::Music* music = new sf::Music();
-	if (!music->openFromFile("Media/Audio/Kick1.ogg")){
-		std::cerr << "Failed to load music file" << std::endl;
-	}
+	FadeEffect* fade = new FadeEffect("FadeEffect");
+	fade->setPosition(0, 0);
+	GameObjectManager::getInstance()->addObject(fade);
 
-	music->play();
-	*/
+	LoadingBar* loadingBar = new LoadingBar("LoadingBar");
+	loadingBar->setPosition(0, WINDOW_HEIGHT - 50);
+	GameObjectManager::getInstance()->addObject(loadingBar);
+
+	FPSCounter* fpsCounter = new FPSCounter();
+	GameObjectManager::getInstance()->addObject(fpsCounter);
+
 }
 
 void BaseRunner::run() {

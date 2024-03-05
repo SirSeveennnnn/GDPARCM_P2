@@ -8,7 +8,12 @@
 
 AudioLooper::AudioLooper(String name) : AGameObject(name)
 {
+	
+}
 
+AudioLooper::~AudioLooper()
+{
+	
 }
 
 void AudioLooper::initialize()
@@ -75,6 +80,14 @@ void AudioLooper::ToggleMusic(string audioName)
 
 	musicStatus[audioName] = !musicStatus[audioName];
 	
+}
+
+void AudioLooper::StopAllMusic()
+{
+	for (const auto& pair : activeLoops)
+	{
+		pair.second->stop();
+	}
 }
 
 void AudioLooper::AddMusicToLoop(string audioName)

@@ -137,12 +137,14 @@
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="BGObject.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="FadeEffect.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="IExecutionEvent.cpp" />
     <ClCompile Include="LaunchPadBase.cpp" />
+    <ClCompile Include="LoadingBar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="PoolWorkerThread.cpp" />
@@ -154,6 +156,7 @@
     <ClCompile Include="TextureDisplay.cpp" />
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="VideoObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AGameObject.h" />
@@ -164,6 +167,7 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="color.h" />
+    <ClInclude Include="FadeEffect.h" />
     <ClInclude Include="FPSCounter.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="hittable.h" />
@@ -174,6 +178,7 @@
     <ClInclude Include="interval.h" />
     <ClInclude Include="IWorkerAction.h" />
     <ClInclude Include="LaunchPadBase.h" />
+    <ClInclude Include="LoadingBar.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="PoolWorkerThread.h" />
@@ -189,6 +194,7 @@
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="vec3.h" />
+    <ClInclude Include="VideoObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

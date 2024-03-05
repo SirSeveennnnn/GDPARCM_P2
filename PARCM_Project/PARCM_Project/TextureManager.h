@@ -10,6 +10,7 @@ public:
 	typedef std::string String;
 	typedef std::vector<sf::Texture*> TextureList;
 	typedef std::unordered_map<String, TextureList> HashTable;
+	typedef std::unordered_map<int, sf::Texture*> SequenceMap;
 	
 public:
 	static TextureManager* getInstance();
@@ -22,21 +23,27 @@ public:
 	int getNumLoadedStreamTextures() const;
 	void instantiateAsTexture(String path, String assetName, bool isStreaming);
 
+
+	void loadSequence(int index, IExecutionEvent* executionEvent);
+	void addToSequence(String path, int index);
+	sf::Texture* getSequenceTexture(int index);
+
 	int streamingAssetCount = 0;
 private:
 	void countStreamingAssets();
 
 	const std::string STREAMING_PATH = "Media/Streaming/";
+	const std::string SEQUENCE_PATH = "Media/Sequence/";
 
 	TextureManager();
 	TextureManager(TextureManager const&) {};             // copy constructor is private
 	TextureManager& operator=(TextureManager const&) {};  // assignment operator is private
 	static TextureManager* sharedInstance;
 
+	SequenceMap sequenceMap;
 	HashTable textureMap;
 	TextureList baseTextureList;
 	TextureList streamTextureList;
-
 	ThreadPool* textureThreadPool;
 
 };

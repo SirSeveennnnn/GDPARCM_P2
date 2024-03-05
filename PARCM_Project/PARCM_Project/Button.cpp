@@ -15,7 +15,7 @@ void Button::initialize()
 
 	//assign texture
 	this->sprite = new sf::Sprite();
-	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Button", 0);
+	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Button1", 0);
 	this->sprite->setTexture(*texture);
 
 	//sf::Vector2u textureSize = this->sprite->getTexture()->getSize();
@@ -25,6 +25,7 @@ void Button::initialize()
 
 	// Set the origin to the center of the texture
 	this->sprite->setOrigin(textureSize.x / 2.0f, textureSize.y / 2.0f);
+	this->sprite->setColor(sf::Color(0, 156, 209, 255));
 
 }
 
@@ -40,13 +41,14 @@ void Button::processInput(sf::Event event)
 			if (enabled)
 			{
 				cout << "Button is Enabled" << endl;
-				this->sprite->setColor(sf::Color::White);
+				this->sprite->setColor(sf::Color(0, 156, 209, 255));
 				enabled = false;
 			}
 			else if (!enabled)
 			{
 				cout << "Button is Disabled" << endl;
-				this->sprite->setColor(sf::Color::Green);
+				this->sprite->setColor(sf::Color(49, 244, 247, 255));
+				
 				enabled = true;
 			}
 

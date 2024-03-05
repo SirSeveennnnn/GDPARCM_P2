@@ -77,6 +77,15 @@
     <ClCompile Include="AudioLooper.cpp">
       <Filter>SFML Project\P2 Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="VideoObject.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeEffect.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingBar.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RTImage.h">
@@ -172,6 +181,15 @@
       <Filter>SFML Project\P2 Scripts</Filter>
     </ClInclude>
     <ClInclude Include="AudioLooper.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoObject.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeEffect.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingBar.h">
       <Filter>SFML Project\P2 Scripts</Filter>
     </ClInclude>
   </ItemGroup>
