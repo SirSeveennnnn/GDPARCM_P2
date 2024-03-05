@@ -7,6 +7,9 @@
     <Filter Include="SFML Project">
       <UniqueIdentifier>{c16ad615-f132-4932-a0b0-d737085d53f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SFML Project\P2 Scripts">
+      <UniqueIdentifier>{f79e1551-8499-4c06-9e6e-31fec0ae2cf2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RTImage.cpp">
@@ -62,6 +65,18 @@
     </ClCompile>
     <ClCompile Include="ThreadPool.cpp" />
     <ClCompile Include="PoolWorkerThread.cpp" />
+    <ClCompile Include="Button.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundImage.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="LaunchPadBase.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioLooper.cpp">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RTImage.h">
@@ -147,5 +162,17 @@
     </ClInclude>
     <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="PoolWorkerThread.h" />
+    <ClInclude Include="Button.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundImage.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="LaunchPadBase.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioLooper.h">
+      <Filter>SFML Project\P2 Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

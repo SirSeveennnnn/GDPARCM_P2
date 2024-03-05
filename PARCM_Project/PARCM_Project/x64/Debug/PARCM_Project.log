@@ -1,2 +1,12 @@
-﻿  ThreadPool.cpp
-  PARCM_Project.vcxproj -> E:\.School\GDPARCM\GDPARCM_Macuha\PARCM_Project\x64\Debug\PARCM_Project.exe
+﻿  Button.cpp
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,83): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,83): warning C4244:         with
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,83): warning C4244:         [
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,83): warning C4244:             T=float
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,83): warning C4244:         ]
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,62): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,62): warning C4244:         with
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,62): warning C4244:         [
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,62): warning C4244:             T=float
+E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\PARCM_Project\Button.cpp(35,62): warning C4244:         ]
+  PARCM_Project.vcxproj -> E:\.School\GDPARCM\GDPARCM_P2\GDPARCM_P2\PARCM_Project\x64\Debug\PARCM_Project.exe

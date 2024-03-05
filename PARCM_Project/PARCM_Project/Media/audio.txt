@@ -1,0 +1,12 @@
+Media/Audio/HH1.ogg
+Media/Audio/HH2.ogg
+Media/Audio/HH3.ogg
+Media/Audio/HH4.ogg
+Media/Audio/Kick1.ogg
+Media/Audio/Kick2.ogg
+Media/Audio/Kick3.ogg
+Media/Audio/Kick4.ogg
+Media/Audio/Snare1.ogg
+Media/Audio/Snare2.ogg
+Media/Audio/Snare3.ogg
+Media/Audio/Snare4.ogg

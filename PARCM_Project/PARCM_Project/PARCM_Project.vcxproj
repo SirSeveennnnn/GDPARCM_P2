@@ -111,7 +111,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)\PARCM_Project\Libs\SFML-2.6.1\lib;$(SolutionDir)\PARCM_Project\Libs\opencv\build\x64\vc16\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;freetype.lib;ogg.lib;openal32.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;sfml-network-s-d.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;winmm.lib;opencv_world490d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;freetype.lib;ogg.lib;openal32.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;sfml-network-s-d.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;winmm.lib;opencv_world490d.lib;flac.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,13 +132,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AGameObject.cpp" />
+    <ClCompile Include="AudioLooper.cpp" />
+    <ClCompile Include="BackgroundImage.cpp" />
     <ClCompile Include="BaseRunner.cpp" />
     <ClCompile Include="BGObject.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="FPSCounter.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="IconObject.cpp" />
     <ClCompile Include="IETThread.cpp" />
     <ClCompile Include="IExecutionEvent.cpp" />
+    <ClCompile Include="LaunchPadBase.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="PoolWorkerThread.cpp" />
@@ -153,8 +157,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AGameObject.h" />
+    <ClInclude Include="AudioLooper.h" />
+    <ClInclude Include="BackgroundImage.h" />
     <ClInclude Include="BaseRunner.h" />
     <ClInclude Include="BGObject.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="color.h" />
     <ClInclude Include="FPSCounter.h" />
@@ -166,6 +173,7 @@
     <ClInclude Include="IExecutionEvent.h" />
     <ClInclude Include="interval.h" />
     <ClInclude Include="IWorkerAction.h" />
+    <ClInclude Include="LaunchPadBase.h" />
     <ClInclude Include="material.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="PoolWorkerThread.h" />
